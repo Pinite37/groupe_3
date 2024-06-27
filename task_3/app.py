@@ -1,56 +1,66 @@
 from tkinter import *
-from time import sleep
+from tkinter.ttk import Progressbar
+from PIL import Image, ImageTk
+import time
+import threading
 
-#Création de la fenetre
-Win=Tk()
+# Function to simulate image generation
+def generate_image():
+    threading.Thread(target=simulate_loading).start()
+
+def simulate_loading():
+    spinner.grid(row=1, column=1, padx=10, pady=10)
+    spinner.start()  # Start the spinner
+    for i in range(100):
+        time.sleep(0.05)
+        progress_var.set(i + 1)
+    display_image()
+
+def display_image():
+    spinner.stop()  # Stop the spinner
+    spinner.grid_remove()  # Hide the spinner
+    # Load an example image (replace with actual image generation)
+    img = Image.open("task_3/test.jpg")  # Ensure this image is in the same directory
+    img = img.resize((500, 300), Image.LANCZOS)
+    img = ImageTk.PhotoImage(img)
+    image_label.config(image=img)
+    image_label.image = img
+
+# Create main window
+Win = Tk()
 Win.title("Visualizer")
 Win.geometry("1100x800")
 Win.minsize(1000, 800)
 Win.config(background="#FFFFFC")
 
-#Zone d'affichage de l'image
-affichage=Frame(Win, bg="#000001", width=380,height=380)
-affichage.pack(side="bottom", pady=20)
+# Title of the application
+titre = Label(Win, text="Visualizer", font=("Arial", 30), bg="#FFFFFC")
+titre.pack(pady=20)
 
+# Guide for image description
+info1 = Label(Win, text="Description:", font=("Arial", 15), bg="#FFFFFC")
+info1.pack()
 
-#Loading
-class LoadingSplash:
-    #Loading text
-    Load=Label(affichage, text="Loading ....", font=("Arial", 25), fg="#FFFFFF", bg="#000001").place(x="120", y="80")
-   
-    #Loading blocks
-    block1=Label(affichage, bg="#FFFFFC", width=2, height=1).place(x=50,y=180)
-    block2=Label(affichage, bg="#FFFFFC", width=2, height=1).place(x=100,y=180)
-    block3=Label(affichage, bg="#FFFFFC", width=2, height=1).place(x=150,y=180)
-    block4=Label(affichage, bg="#FFFFFC", width=2, height=1).place(x=250,y=180)
-    block5=Label(affichage, bg="#FFFFFC", width=2, height=1).place(x=300,y=180)
-    block6=Label(affichage, bg="#FFFFFC", width=2, height=1).place(x=340,y=180)
-    
-    #Animation des blocks
+# Description input
+descr = StringVar()
+entree = Entry(Win, textvariable=descr, bg="#d6cdcd", font=("Arial", 17))
+entree.pack(fill="x", padx=200, pady=20)
 
-#Titre de l'application
-titre=Label(Win, text="VISUALIZER", font=("Arial", 50), bg="#FFFFFC").pack(fill="x")
+# Button to generate image
+crea = Button(Win, text="Generate Image", font=("Arial", 20), bg="#d6cdcd", command=generate_image)
+crea.pack(pady=20)
 
-#Guide pour mettre la description de l'image souhaitée
-info1=Label(Win, text="Décrivez-nous l'image que vous aimeriez ", font=("Arial", 25) , bg="#FFFFFC").pack(pady=10 , fill="both")
-info2=Label(Win, text="avoir dans l'espace ci-dessous" ,font=("Arial", 25) , bg="#FFFFFC").pack(fill="both")
+# Frame for image display area and spinner
+image_frame = Frame(Win, bg="#FFFFFC")
+image_frame.pack(pady=20)
 
-#Fonction qui récupère la description de l'utilisateur au click du bouton créer 
-def enregistrer ():
-    descr=entree.get()
-    
-#Description de l'image
-descr=StringVar()
-entree=Entry(Win,textvariable=descr ,  bg="#d6cdcd" , font=("Arial", 17) )
-entree.pack(fill="both", side="top", padx=200, pady=30)
+# Spinner (loading indicator)
+progress_var = DoubleVar()
+spinner = Progressbar(image_frame, mode='indeterminate', length=100, variable=progress_var)
 
-#Bouton créer
-crea=Button(Win, text="CREER", font=("Arial", 30) , bg="#d6cdcd", width=6 , command=enregistrer)
-crea.pack(side="top" )
+# Image display area
+image_label = Label(image_frame, bg="#FFFFFC", width=500, height=300)
+image_label.grid(row=0, column=0, padx=10, pady=10)
 
-#Affichage de la fenetre et de tout son contenu
+# Display window
 Win.mainloop()
-
-
-
-
