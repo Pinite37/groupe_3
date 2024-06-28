@@ -50,7 +50,7 @@ Spinner indiquant le chargement
 
 ### Contributions des Membres de l'Équipe
 
-ALLOGNON Wagnilo Ruthus Valamus : 10%
+ALLOGNON Wanignilo Ruthus Valamus : 10%
 
 FAGNIHOUN Fidélien Finignon :  10%
 
