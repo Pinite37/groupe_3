@@ -37,9 +37,13 @@ Le code complet est inclus dans le fichier ''
 
 ### Fonctionnalités
 Zone de texte pour la description
+
 Bouton pour générer l'image
+
 Zone d'affichage pour l'image générée
+
 Spinner indiquant le chargement
+
 
 
 ### Contributions des Membres de l'Équipe
