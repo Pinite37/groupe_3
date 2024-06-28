@@ -38,13 +38,13 @@ def display_image():
 
 # Create main window
 Win = Tk()
-Win.title("Visualizer")
+Win.title("Picture App")
 Win.geometry("1100x800") 
 Win.minsize(1000, 800)
 Win.config(background="#FFFFFC")
 
 # Title of the application
-titre = Label(Win, text="Visualizer", font=("Arial", 30), bg="#FFFFFC")
+titre = Label(Win, text="Picture App", font=("Arial", 30), bg="#FFFFFC")
 titre.pack(pady=20)
 
 # Guide for image description
