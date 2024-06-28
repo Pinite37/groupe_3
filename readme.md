@@ -20,10 +20,12 @@ Le code complet est inclus dans le fichier `numpy.py`.
 Nous avons réalisé une analyse de données en utilisant Python et R pour créer des graphiques basés sur le fichier Housing.csv contenant des données sur les prix de l'immobilier. Les graphiques créés sont un histogramme de la colonne `bedrooms` et un scatter plot des colonnes `area` (en abscisse) et `price` (en ordonnées).
 
 ### Analyse des Graphiques
+
 ### Histogramme de la colonne 'bedroom':
 
 En Python et en R, l'histogramme montre que la majorité des propriétés ont entre 2 et 4 chambres.
-Graphique de dispersion (scatter plot) :
+
+### Graphique de dispersion (scatter plot) :
 
 Le graphique de dispersion montre une tendance positive entre la surface et le prix, indiquant une corrélation positive entre la surface et le prix de l'immobilier.
 
