@@ -49,3 +49,25 @@ Spinner indiquant le chargement
 
 
 ### Contributions des Membres de l'Équipe
+
+ALLOGNON Wagnilo Ruthus Valamus : 10%
+
+FAGNIHOUN Fidélien Finignon :  10%
+
+AMAGBEGNON Rosmé Essé : 10%
+
+AFOMASSE Waninsou Enagnitan Pinite Théophas : 10%
+
+GBEHI  Emar : 00%
+
+KETOUNOU Gbèdomon Elisée: 10%
+
+AGBOSSOUNON Mariane Anaëlle Sèna : 10%
+
+GBAGUIDI Daki Estina Winoumi : 10%
+
+KODJEKOU Oluwafèmi Dariel Michaël: 10%
+
+ZEHE Kenneth : 10%
+
+SANNI Adéchinan Dyanos Charbel: 10%
