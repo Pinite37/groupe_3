@@ -21,7 +21,7 @@ Nous avons réalisé une analyse de données en utilisant Python et R pour crée
 
 ### Analyse des Graphiques
 
-### Histogramme de la colonne 'bedroom':
+### Histogramme de la colonne bedroom:
 
 En Python et en R, l'histogramme montre que la majorité des propriétés ont entre 2 et 4 chambres.
 
@@ -35,7 +35,7 @@ Le graphique de dispersion montre une tendance positive entre la surface et le p
 Nous avons créé une application GUI en utilisant Tkinter en Python. L'application permet à l'utilisateur de saisir une description textuelle et de générer une image correspondante à l'aide d'un modèle pré-entraîné de Hugging Face.
 
 ### Code
-Le code complet est inclus dans le fichier ''
+Le code complet est inclus dans le fichier 'app.py'
 
 ### Fonctionnalités
 Zone de texte pour la description
